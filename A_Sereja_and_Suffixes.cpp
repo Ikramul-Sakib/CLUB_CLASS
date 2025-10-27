@@ -1,0 +1,62 @@
+//@handle Ikramul Hassan
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <sstream>
+#include <queue>
+#include <deque>
+#include <bitset>
+#include <iterator>
+#include <list>
+#include <stack>
+#include <map>
+#include <set>
+#include <functional>
+#include <numeric>
+#include <utility>
+#include <limits>
+using namespace std;
+#define int long long
+#define pb push_back
+#define py cout << "YES" << endl
+#define pn cout << "NO" << endl
+#define fl(a, b) for (int i = a; i < b; i++)
+#define flj(a, b) for (int j = a; j< b; j++)
+#define fll(a) for (auto &i : a)
+#define ssort(a) sort(a.begin(), a.end())
+#define ssortf(a, x) sort(a.begin(), a.end(), x)
+#define rvs(a) reverse(a.begin(), a.end())
+#define all(a) (a).begin(), (a).end()
+#define el cout << "\n"
+#define endl "\n"
+#define sz(a) a.size()
+#define FastIO() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+
+int32_t main(){
+    FastIO();
+    int n,m;
+    cin>>n>>m;
+    vector<int>v(n+1);
+    vector<int>a(n+1);
+    for (int i = 1; i <= n; i++)
+    {
+        cin>>v[i];
+    }
+    set<int>t;
+    for (int i = v.size()-1; i > 0; i--)
+    {
+        t.insert(v[i]);
+        a[i] = t.size();
+    }
+    
+    for (int i = 1; i <= m; i++)
+    {
+        int p ;
+        cin>>p;
+        //set<int>s;
+        cout<<a[p]<<endl;
+    }
+
+return 0;
+}
